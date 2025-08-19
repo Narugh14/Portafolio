@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Luis Ángel Montelongo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1>Luis Ángel Montelongo</h1>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sobre mí -->
+  <section id="about" class="section">
+    <img src="img/perfil.jpg" alt="Luis Ángel Montelongo" class="perfil">
+    <h2>👋 Hola, soy Luis Ángel Montelongo</h2>
+    <p>Soy desarrollador Java con experiencia en Spring Boot y aplicaciones web. Me encanta aprender nuevas tecnologías y crear proyectos que resuelvan problemas reales.</p>
+    <div class="social-links">
+      <a href="https://github.com/tu-usuario" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/tu-usuario" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="skills" class="section">
+    <h2>💡 Habilidades</h2>
+    <div class="skills-grid">
+      <div class="skill">Java</div>
+      <div class="skill">Spring Boot</div>
+      <div class="skill">HTML/CSS/JS</div>
+      <div class="skill">Git/GitHub</div>
+      <div class="skill">MySQL/PostgreSQL</div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="projects" class="section">
+    <h2>💻 Proyectos</h2>
+    <div class="filter-buttons">
+      <button data-tech="all" class="active">Todos</button>
+      <button data-tech="java">Java</button>
+      <button data-tech="web">Web</button>
+    </div>
+    <div id="github-projects" class="projects-grid">
+      <!-- Los proyectos se cargarán desde GitHub con JavaScript -->
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contact" class="section">
+    <h2>📩 Contacto</h2>
+    <p>Puedes escribirme a: <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a></p>
+    <p>O visitar mi <a href="https://github.com/tu-usuario" target="_blank">GitHub</a>.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Luis Ángel Montelongo | Portafolio Personal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
