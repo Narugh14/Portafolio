@@ -3,75 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio | Luis Ángel Montelongo</title>
+  <title>Portafolio - Luis Ángel Montelongo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Header -->
   <header>
+    <div class="logo"><strong>Luis Ángel</strong></div>
     <nav>
-      <h1>Luis Ángel Montelongo</h1>
-      <ul>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
+      <a href="#projects">Proyectos</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contacto</a>
     </nav>
   </header>
 
-  <!-- Sobre mí -->
-  <section id="about" class="section">
-    <img src="img/perfil.jpg" alt="Luis Ángel Montelongo" class="perfil">
-    <h2>👋 Hola, soy Luis Ángel Montelongo</h2>
-    <p>Soy desarrollador Java con experiencia en Spring Boot y aplicaciones web. Me encanta crear proyectos que resuelvan problemas reales y aprender nuevas tecnologías.</p>
-    <div class="social-links">
-      <a href="https://github.com/tu-usuario" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/tu-usuario" target="_blank">LinkedIn</a>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hola, soy Luis Ángel Montelongo 👋</h1>
+    <p>Desarrollador Java | Spring Boot | Docker</p>
+    <div class="btns">
+      <a href="https://github.com/tu-usuario" class="btn">GitHub</a>
+      <a href="https://linkedin.com/in/tu-perfil" class="btn">LinkedIn</a>
     </div>
   </section>
 
   <!-- Proyectos -->
-  <section id="projects" class="section">
-    <h2>💻 Proyectos</h2>
-    <div id="github-projects" class="projects-grid">
-      <!-- Los proyectos se cargarán desde GitHub con JavaScript -->
+  <section id="projects">
+    <h2>🚀 Proyectos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>API Pedidos – Pastelería</h3>
+        <p>Microservicio con Spring Boot y JWT desplegado en Docker.</p>
+        <div class="tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>WhatsApp Bot</h3>
+        <p>Chatbot para pedidos con Twilio y Node.js.</p>
+        <div class="tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Twilio</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Juego educativo EN/ES</h3>
+        <p>Juego de memorama con API de palabras y niveles.</p>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Skills -->
+  <section id="skills">
+    <h2>⚡ Skills</h2>
+    <ul>
+      <li>Java 8+ | Spring Boot | JPA/Hibernate</li>
+      <li>REST APIs | OAuth2/JWT</li>
+      <li>Docker | GitHub Actions | SQL</li>
+      <li>React | HTML | CSS | JS</li>
+    </ul>
+  </section>
+
   <!-- Contacto -->
-  <section id="contact" class="section">
+  <section id="contact" class="contact">
     <h2>📩 Contacto</h2>
-    <p>Puedes escribirme a: <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a></p>
-    <p>O visitar mi <a href="https://github.com/tu-usuario" target="_blank">GitHub</a>.</p>
+    <ul>
+      <li>Email: <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></li>
+      <li>Teléfono: <a href="tel:+524430000000">+52 443 000 0000</a></li>
+      <li>Ubicación: Morelia, MX</li>
+    </ul>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Luis Ángel Montelongo | Portafolio Personal</p>
+    © 2025 Luis Ángel Montelongo – Portafolio
   </footer>
 
-  <!-- Script para proyectos desde GitHub -->
-  <script>
-    const githubUser = 'tu-usuario'; // Cambia a tu usuario GitHub
-    const projectsContainer = document.getElementById('github-projects');
-
-    fetch(`https://api.github.com/users/${githubUser}/repos`)
-      .then(response => response.json())
-      .then(repos => {
-        repos.forEach(repo => {
-          // Solo repos con descripción
-          if(repo.description){
-            const card = document.createElement('div');
-            card.classList.add('card');
-            card.innerHTML = `
-              <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-              <p>${repo.description}</p>
-            `;
-            projectsContainer.appendChild(card);
-          }
-        });
-      })
-      .catch(err => console.error(err));
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
