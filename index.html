@@ -1,100 +1,453 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio - Luis Ángel Montelongo</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">Luis Ángel</div>
-    <nav>
-      <a href="#projects">Proyectos</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Hola, soy <span>Luis Ángel Montelongo</span> 👋</h1>
-      <p>Desarrollador Java | Spring Boot | Docker</p>
-      <div class="btns">
-        <a href="https://github.com/Narugh14" class="btn">GitHub</a>
-        <a href="https://www.linkedin.com/in/luis-montelongo0516/" class="btn">LinkedIn</a>
-      </div>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Nick</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
     </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>⚡ Skills</h2>
-    <div class="skills-grid">
-      <span>Java 8+</span>
-      <span>Spring Boot</span>
-      <span>JPA/Hibernate</span>
-      <span>REST APIs</span>
-      <span>OAuth2/JWT</span>
-      <span>Docker</span>
-      <span>GitHub Actions</span>
-      <span>SQL</span>
-      <span>React</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-    </div>
-  </section>
-  <!-- Proyectos -->
-  <section id="projects">
-    <h2>🚀 Proyectos</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>API Pedidos – Pastelería</h3>
-        <p>Microservicio con Spring Boot y JWT desplegado en Docker.</p>
-        <div class="tags">
-          <span class="tag">Java</span>
-          <span class="tag">Spring Boot</span>
-          <span class="tag">Docker</span>
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.png" alt="">
+            </div>
+            <h1>LUIS ANGEL</h1>
+            <h2>Ingeniero de Software - Especialista Backend Spring</h2>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-solid fa-rss"></i></a>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <h3>WhatsApp Bot</h3>
-        <p>Chatbot para pedidos con Twilio y Node.js.</p>
-        <div class="tags">
-          <span class="tag">Node.js</span>
-          <span class="tag">Twilio</span>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Luis Montelongo.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam unde soluta minima necessitatibus, voluptas consectetur vero officiis quas, explicabo deleniti repellendus aliquid debitis maiores numquam voluptate reprehenderit in delectus dolores.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            14-01-2000
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +52 462 197 4123
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            luismontelongo0516@gmail.com
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            www.example.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Guanajuato, México
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Backend Spring</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <button>
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
         </div>
-      </div>
-      <div class="card">
-        <h3>Juego educativo EN/ES</h3>
-        <p>Juego de memorama con API de palabras y niveles.</p>
-        <div class="tags">
-          <span class="tag">JavaScript</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Wordpress</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>81%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Drupa</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyect Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>94%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contacto -->
-  <section id="contact" class="contact">
-    <h2>📩 Contacto</h2>
-    <ul>
-      <li>Email: <a href="mailto: luismontelongo0516@gmail.com">luismontelongo0516@gmail.com</a></li>
-      <li>Teléfono: <a href="tel:+524621974123">+52 462 197 4123</a></li>
-      <li>Ubicación: Guanajauto, MX</li>
-    </ul>
-  </section>
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Especialista Backend</h4>
+                        <span class="casa">Oracle Next Education</span>
+                        <span class="fecha">2025 - 2025</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Ingenieria en Mecatronica</h4>
+                        <span class="casa">Instituto Tecnologico Superior de Irapuato</span>
+                        <span class="fecha">2017 - 2022</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Tecnico en Desarrollo de Software</h4>
+                        <span class="casa">CBTis 65</span>
+                        <span class="fecha">2015 - 2018</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Luis Ángel Montelongo – Portafolio
-  </footer>
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Backend Developer</h4>
+                        <span class="casa">Autmix de México</span>
+                        <span class="fecha">2023 - 2025</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Intern Developer Software</h4>
+                        <span class="casa">Clauger de México</span>
+                        <span class="fecha">2023 - 2023</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>FullStack Developer jr</h4>
+                        <span class="casa">Anmo Technologie</span>
+                        <span class="fecha">2018 - 2021</span>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+     <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTAFOLIO</h2>
+            <div class="galeria" id="github-projects">
+                <!-- Los proyectos de GitHub se cargarán aquí dinámicamente -->
+                <div class="loader">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = 'Narugh14'; // Reemplaza con tu nombre de usuario de GitHub
+            const projectsContainer = document.getElementById('github-projects');
+            
+            // Función para formatear números (k para miles)
+            function formatNumber(num) {
+                if (num >= 1000) {
+                    return (num / 1000).toFixed(1) + 'k';
+                }
+                return num;
+            }
+            
+            // Función para obtener los proyectos de GitHub
+            async function fetchGitHubProjects() {
+                try {
+                    const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&direction=desc`);
+                    
+                    if (!response.ok) {
+                        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+                    }
+                    
+                    const projects = await response.json();
+                    
+                    // Limpiar el contenedor
+                    projectsContainer.innerHTML = '';
+                    
+                    // Mostrar solo los 6 proyectos más recientes
+                    const recentProjects = projects.slice(0, 6);
+                    
+                    if (recentProjects.length === 0) {
+                        projectsContainer.innerHTML = '<div class="error-message">No se encontraron proyectos públicos en GitHub.</div>';
+                        return;
+                    }
+                    
+                    // Crear elementos para cada proyecto
+                    recentProjects.forEach(project => {
+                        const projectElement = document.createElement('div');
+                        projectElement.className = 'proyecto';
+                        
+                        // Intentar obtener imagen del README (usaremos una por defecto si no se encuentra)
+                        const imageUrl = `https://opengraph.githubassets.com/1/${username}/${project.name}`;
+                        
+                        projectElement.innerHTML = `
+                            <img src="${imageUrl}" alt="${project.name}" onerror="this.src='data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22300%22 height%3D%22250%22 viewBox%3D%220 0 300 250%22%3E%3Crect fill%3D%22%23333%22 width%3D%22300%22 height%3D%22250%22%2F%3E%3Ctext fill%3D%22%23fff%22 font-family%3D%22Arial%22 font-size%3D%2220%22 x%3D%2250%25%22 y%3D%2250%25%22 text-anchor%3D%22middle%22%3E${project.name}%3C%2Ftext%3E%3C%2Fsvg%3E'">
+                            <div class="overlay">
+                                <h3>${project.name}</h3>
+                                <p>${project.description || 'Sin descripción'}</p>
+                                <div class="github-stats">
+                                    <span title="Stars">⭐ ${formatNumber(project.stargazers_count)}</span>
+                                    <span title="Forks">🔗 ${formatNumber(project.forks_count)}</span>
+                                    <span title="Watchers">👀 ${formatNumber(project.watchers_count)}</span>
+                                </div>
+                                <a href="${project.html_url}" target="_blank" class="project-link">Ver en GitHub</a>
+                                ${project.homepage ? `<a href="${project.homepage}" target="_blank" class="project-link">Ver Demo</a>` : ''}
+                            </div>
+                        `;
+                        
+                        projectsContainer.appendChild(projectElement);
+                    });
+                    
+                } catch (error) {
+                    console.error('Error al cargar los proyectos:', error);
+                    projectsContainer.innerHTML = `
+                        <div class="error-message">
+                            <p>Error al cargar los proyectos de GitHub.</p>
+                            <p>${error.message}</p>
+                        </div>
+                    `;
+                }
+            }
+            
+            // Llamar a la función para cargar los proyectos
+            fetchGitHubProjects();
+        });
+    </script>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Guanajuato, México.
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llamanos: +52 462 1974123 
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: luismontelongo0516@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
